@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-time {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 24px;
+  margin-right: 10px;
+}
+
+#date,
+.weather {
+  margin-right: 15px;
+  color: #666;
+}
+
+.header-right {
+  display: flex;
+}
+
+.header-right .menutop {
+  align-items: center;
+}
+.header-right a {
+  color: #666;
+  padding: 0px 15px;
+}
+
+.header-right .search {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* menu avatar */
+.avatar,
+.login-btn {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.login-btn {
+  color: #666;
+  cursor: pointer;
+  padding: 4px 5px;
+  display: inline-block;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.avatar {
+  position: relative; /* Đặt vị trí của avatar để dropdown menu căn chỉnh theo nó */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Đặt menu ngay dưới avatar */
+  left: 50%; /* Căn giữa menu con theo chiều ngang */
+  transform: translateX(-50%); /* Dịch chuyển để menu không bị lệch */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Đặt độ rộng phù hợp */
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: block; /* Hiển thị menu khi thêm lớp .show */
+}
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+.dropdown-menu li a:hover {
+  color: #666600;
+}
+
+/* Hiển thị menu khi có lớp .show */
+.dropdown-menu.show {
+  display: block;
+}
+/* header bot */
+.menu > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+
+.menu > ul > li {
+  list-style: none;
+  position: relative;
+  padding: 15px 20px;
+  white-space: nowrap;
+}
+
+.menu a {
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #333;
+}
+
+/* Menu cấp 2 */
+.menu > ul > li > ul {
+  position: absolute;
+  top: 100%; /* Hiển thị menu ngay dưới menu cấp 1 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 200px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px; /* Bo tròn các góc */
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.menu > ul > li:hover > ul {
+  display: block; /* Hiển thị menu khi hover */
+}
+
+.menu > ul > li > ul > li {
+  padding: 10px 15px;
+}
+
+.menu > ul > li > ul > li a {
+  display: block;
+  color: #666;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 15px;
+}
+
+.menu > ul > li > ul > li a:hover {
+  color: red;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* section */
+section .Theloai {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  color: #666666;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f3f4f6;
+  padding-left: 15px;
+  border-left: 5px solid #666666;
+  box-shadow: 0 2px 4px #666666;
+  margin-bottom: 5px;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+section a {
+  color: black;
+}
+section .content .box1 {
+  display: flex;
+  width: 70%;
+  gap: 10px;
+  margin-left: 10%;
+}
+section .content .box1 .img {
+  width: 680px;
+  height: 408px;
+  overflow: hidden;
+}
+
+section .content .box1 .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .content .box1 .decribe {
+  width: 200px;
+  height: 408px;
+}
+section .content .box1 .title :hover {
+  color: rgb(77, 77, 218);
+}
+section .content .box1 .title {
+  font-size: 20px;
+  width: 100%;
+}
+section .content .box1 .general {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+section .content .box1 .timeandcategory {
+  display: flex;
+  margin-top: 15px;
+  gap: 10px;
+  justify-content: center;
+}
+section .content .box1 .timeandcategory .category :hover {
+  color: rgb(77, 77, 218);
+}
+/* phan cach */
+.phancach {
+  width: 70%;
+  margin-left: 10%;
+  background-color: #706a6a;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* box2 */
+section .content .box2 {
+  display: flex;
+  width: 70%;
+  gap: 10px;
+  margin-left: 10%;
+}
+section .content .box2 .boxcon1,
+.boxcon2 {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+section .content .box2 .boxcon1 :hover,
+.boxcon2 :hover {
+  color: rgb(77, 77, 218);
+}
+section .content .box2 img {
+  width: 300px;
+  height: 180px;
+  padding: 5px 5px;
+}
+
+section .content .box2 .boxcon3 .category {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section .content .box2 .boxcon3 .category a {
+  color: #9f224e;
+}
+
+section .content .box2 .boxcon3 .title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+section .content .box2 .boxcon3 .general {
+  font-size: 14px;
+}
+
+section .content .box2 .boxcon3 .author {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+section .content .box2 .boxcon3 .author :hover {
+  color: rgb(77, 77, 218);
+}
+
+/* box3 */
+.box3 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 70%;
+  gap: 10px;
+  margin-left: 10%;
+}
+
+.box3 h1 {
+  font-size: 24px;
+  color: #666600;
+}
+
+.subcategories {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.subcategories a {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.subcategories a:hover {
+  text-decoration: underline;
+}
+
+.news-container {
+  display: flex;
+  gap: 20px;
+}
+
+.main-news {
+  flex: 2;
+}
+
+.main-news img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.main-news h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.main-news p {
+  font-size: 14px;
+  color: #666;
+}
+
+.sub-news {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sub-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sub-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.sub-item h3 {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+/* footer */
+footer .a {
+  margin-top: 10px;
+  border-top: 3px solid #666;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.container > div {
+  flex: 1;
+}
+
+.container a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container a:hover {
+  color: #666600;
+  text-decoration: underline;
+}
+
+.conter5 h3 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.phone {
+  display: flex;
+  gap: 20px;
+}
+.phone div p:first-child {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+footer .end {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+  color: #fff;
+}

@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-time {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 24px;
+  margin-right: 10px;
+}
+
+#date,
+.weather {
+  margin-right: 15px;
+  color: #666;
+}
+
+.header-right {
+  display: flex;
+}
+
+.header-right .menutop {
+  align-items: center;
+}
+.header-right a {
+  color: #666;
+  padding: 0px 15px;
+}
+
+.header-right .search {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* menu avatar */
+.avatar,
+.login-btn {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.login-btn {
+  color: #666;
+  cursor: pointer;
+  padding: 4px 5px;
+  display: inline-block;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.avatar {
+  position: relative; /* Đặt vị trí của avatar để dropdown menu căn chỉnh theo nó */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Đặt menu ngay dưới avatar */
+  left: 50%; /* Căn giữa menu con theo chiều ngang */
+  transform: translateX(-50%); /* Dịch chuyển để menu không bị lệch */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Đặt độ rộng phù hợp */
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: block; /* Hiển thị menu khi thêm lớp .show */
+}
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+.dropdown-menu li a:hover {
+  color: #666600;
+}
+
+/* Hiển thị menu khi có lớp .show */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* content */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.social-share {
+  position: fixed;
+  top: 40%;
+  left: 10px;
+}
+
+.social-share a {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  margin-left: 50px;
+}
+
+.image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.summary,
+.content {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* binhluan */
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-user {
+  font-weight: bold;
+}
+
+.comment-user img.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

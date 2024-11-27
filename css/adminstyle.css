@@ -1,0 +1,91 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    a {
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+    /* Menu chính */
+    .menu {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .menu > ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .menu > ul > li {
+      list-style: none;
+      position: relative;
+      padding: 15px 20px;
+      white-space: nowrap;
+    }
+
+    .menu a {
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #007BFF;
+    }
+
+    /* Menu cấp 2 */
+    .menu > ul > li > ul {
+      position: absolute;
+      top: 100%; /* Hiển thị menu ngay dưới menu cấp 1 */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      width: 200px;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 8px; /* Bo tròn các góc */
+      padding: 8px 0;
+      z-index: 1000;
+    }
+
+    .menu > ul > li:hover > ul {
+      display: block; /* Hiển thị menu khi hover */
+    }
+
+    .menu > ul > li > ul > li {
+      padding: 10px 15px;
+    }
+
+    .menu > ul > li > ul > li a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 15px;
+    }
+
+    .menu > ul > li > ul > li a:hover {
+      color: red;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .option1:hover > ul {
+      display: block;
+    }
